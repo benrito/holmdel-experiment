@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+
+<!-- Link to Popcorn -->
+
+<script src="js/popcorn-complete.js"></script>
+
+<!-- The Style -->
+
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Pop the Corn -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var pop = Popcorn("#video");
+    
+	pop.googlemap({
+		start: 1,
+		end: 3,
+		type: "SATELLITE",
+		target: "box",
+		lat: 40.3709414,
+		lng: -74.1607112,
+		zoom: 17,
+	});
+
+	pop.googlemap({
+		start: 3.1,
+		end: 12,
+		type: "SATELLITE",
+		target: "box",
+		lat: 40.3709414,
+		lng: -74.1607112,
+		zoom: 18,
+		// effect: "applyclass", // Apply a CSS class to the target container
+		// applyclass: "more-opacity", // Specify which CSS class */
+	});
+
+	pop.webpage({
+		id: "webpages-a",
+		start: 19.1,
+		end: 25,
+		src: "http://itp.nyu.edu/itp/",
+		target: "container"
+	});
+
+});
+</script>
+</head>
+
+<!-- The Body -->
+
+<body>	
+
+<!-- The Container -->
+
+	<div id="container">
+	
+	
+<!--The Video-->		
+
+		<video id="video" class="videostyle" controls>
+  			<source src="video/transistor.mp4">
+		</video>
+
+<!--The Content Box-->
+
+		<div id="box">
+		
+		</div>
+
+<!-- End Container -->
+
+	</div>	
+
+<!-- End Body -->
+
+</body>
+</html>
